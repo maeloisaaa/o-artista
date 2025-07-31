@@ -4,13 +4,40 @@ body {
   font-family: 'Poppins';
 }
 
-header, #principal, #second, #contato, #stream {
+/* Removido o seletor vazio header, #principal, #second, #contato, #stream { }
+   porque ele não tinha propriedades e o que precisamos é especificidade */
 
+/* Estilos para o cabeçalho - para garantir que a logo e o menu fiquem lado a lado */
+header {
+    display: flex;
+    justify-content: space-between; /* Espaço entre a logo e o menu */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px 5%; /* Adiciona um pouco de padding */
+    background-color: #263238; /* Fundo do cabeçalho */
+    color: #e3f2fd;
 }
+
+#logo img {
+    height: 50px; /* Ajuste a altura da sua logo se necessário */
+}
+
+#menu {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Faz os itens do menu ficarem lado a lado */
+    gap: 15px; /* Espaço entre os itens do menu */
+}
+
+.item-menu {
+    margin: 0; /* Remove margem padrão de li */
+}
+
 
 .link-menu {
   color: #fff;
   background-color: #3f51b5; /* Um azul médio para os links gerais do menu */
+  padding: 8px 15px; /* Adiciona padding para os botões */
+  border-radius: 5px; /* Arredonda as bordas dos botões */
+  text-decoration: none; /* Remove sublinhado */
 }
 
 .f {
@@ -28,17 +55,107 @@ header, #principal, #second, #contato, #stream {
 main {
   background-color: #263238; /* Um azul-cinzento escuro para o fundo do conteúdo principal */
   color: #e3f2fd; /* Um azul bem claro para o texto */
+  padding: 20px 0; /* Adiciona padding para a seção principal */
+  display: flex; /* Garante que o main use flex para centralizar o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  min-height: 400px; /* Altura mínima para o main, ajuste se necessário */
 }
 
-h1, h2 {
-  font-family: 'Amatic SC';
+/* REGRAS PARA ORGANIZAR A SEÇÃO PRINCIPAL (IMAGEM E TEXTO DO ARTISTA) */
+#principal {
+  display: flex; /* Ativa o flexbox para que figure e sec_ctd fiquem lado a lado */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 40px; /* Espaço entre a imagem e o texto */
+  max-width: 960px; /* Largura máxima para a seção principal */
+  margin: 0 auto; /* Centraliza a seção principal na página */
+  padding: 20px; /* Padding interno */
 }
 
-#second a{
-  color: #e3f2fd; /* Azul claro para os links na seção #second */
+#principal figure {
+    flex-shrink: 0; /* Impede que a imagem encolha se não houver espaço */
+    margin: 0; /* Remove margem padrão da figure */
 }
+
+#principal img {
+  max-width: 300px; /* Tamanho máximo para a imagem do artista */
+  height: auto; /* Mantém a proporção */
+  border-radius: 8px; /* Adiciona um leve arredondamento nas bordas da imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a imagem */
+}
+
+#sec_ctd {
+  max-width: 600px; /* Largura máxima para o bloco de texto */
+  text-align: justify; /* Justifica o texto */
+}
+
+#sec_ctd h1 {
+  font-size: 3em; /* Tamanho do título "O Artista" */
+  text-align: left; /* Alinha o título à esquerda */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  color: #a7d9e8; /* Cor para o título */
+}
+
+#sec_ctd p {
+  line-height: 1.6; /* Espaçamento entre as linhas do parágrafo */
+}
+
+
+/* REGRAS PARA ORGANIZAR A SEÇÃO SECUNDÁRIA (IMAGENS DOS CARTAZES/CAPAS) */
+#second {
+    display: flex; /* Ativa o flexbox para que os 'a.cartaz' fiquem lado a lado */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre as imagens */
+    padding: 40px 0; /* Padding superior e inferior */
+    background-color: #1c262b; /* Fundo para a seção secundária */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
+}
+
+#second a.cartaz {
+    display: block; /* Garante que a âncora se comporte como bloco */
+    text-align: center;
+    text-decoration: none;
+    color: #e3f2fd;
+}
+
+#second .capa {
+    width: 250px; /* Largura fixa para as capas */
+    height: 350px; /* Altura fixa para as capas */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px; /* Arredonda as bordas das capas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para as capas */
+    transition: transform 0.3s ease; /* Transição suave para o hover */
+}
+
+#second .capa:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
 
 footer {
-  background-color: #263238; /* Azul-cinzento escuro para o fundo do rodapé, combinando com o 'main' */
-  color: #e3f2fd; /* Azul claro para o texto do rodapé, combinando com o 'main' */
+  background-color: #263238; /* Dark grey-blue for the footer background, matching main */
+  color: #e3f2fd; /* Light blue for footer text, matching main */
+  padding: 20px 0;
+  text-align: center;
+}
+
+#contato {
+    display: flex;
+    justify-content: space-around; /* Espaça email e social */
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+#email a {
+    color: #e3f2fd;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#social img {
+    height: 30px; /* Tamanho dos ícones sociais */
+    margin: 0 10px; /* Espaçamento entre os ícones */
 }
