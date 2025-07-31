@@ -2,29 +2,31 @@
 
 body {
   font-family: 'Poppins';
+  margin: 0; /* Remover margem padrão do body */
+  background-color: #e0f2f7; /* Um azul muito claro para o fundo geral */
 }
-
-/* Removido o seletor vazio header, #principal, #second, #contato, #stream { }
-   porque ele não tinha propriedades e o que precisamos é especificidade */
 
 /* Estilos para o cabeçalho - para garantir que a logo e o menu fiquem lado a lado */
 header {
     display: flex;
     justify-content: space-between; /* Espaço entre a logo e o menu */
     align-items: center; /* Alinha verticalmente */
-    padding: 10px 5%; /* Adiciona um pouco de padding */
-    background-color: #263238; /* Fundo do cabeçalho */
-    color: #e3f2fd;
+    padding: 15px 5%; /* Adiciona um pouco de padding */
+    background-color: #ADD8E6; /* Azul claro para o cabeçalho */
+    color: #2c3e50; /* Cor escura para o texto no cabeçalho */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para o cabeçalho */
 }
 
 #logo img {
-    height: 50px; /* Ajuste a altura da sua logo se necessário */
+    height: 60px; /* Ajuste a altura da sua logo se necessário */
 }
 
 #menu {
     list-style: none; /* Remove os marcadores da lista */
     display: flex; /* Faz os itens do menu ficarem lado a lado */
-    gap: 15px; /* Espaço entre os itens do menu */
+    gap: 20px; /* Espaço entre os itens do menu */
+    margin: 0; /* Remove margem padrão de ul */
+    padding: 0; /* Remove padding padrão de ul */
 }
 
 .item-menu {
@@ -34,128 +36,289 @@ header {
 
 .link-menu {
   color: #fff;
-  background-color: #3f51b5; /* Um azul médio para os links gerais do menu */
-  padding: 8px 15px; /* Adiciona padding para os botões */
-  border-radius: 5px; /* Arredonda as bordas dos botões */
+  background-color: #64B5F6; /* Um azul médio-claro para os links gerais do menu */
+  padding: 10px 20px; /* Adiciona padding para os botões */
+  border-radius: 25px; /* Mais arredondado para um visual mais suave */
   text-decoration: none; /* Remove sublinhado */
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
 }
 
+.link-menu:hover {
+    background-color: #42A5F5; /* Azul um pouco mais escuro ao passar o mouse */
+}
+
+/* Cores específicas dos links (F, L, M) mais claras */
 .f {
-  background-color: #1a237e; /* Um azul escuro, substituindo o #5b305a (roxo) */
+  background-color: #90CAF9; /* Azul bem claro (Filme) */
+}
+.f:hover {
+    background-color: #64B5F6;
 }
 
 .l {
-  background-color: #2196f3; /* Um azul brilhante, substituindo o #e49756 (laranja) */
+  background-color: #BBDEFB; /* Azul muito claro (Livro) */
+}
+.l:hover {
+    background-color: #90CAF9;
 }
 
 .m {
-  background-color: #0d47a1; /* Um azul forte, substituindo o #e04b5a (vermelho) */
+  background-color: #E3F2FD; /* Azul claríssimo (Música) */
+  color: #2c3e50; /* Texto escuro para contraste no botão mais claro */
+}
+.m:hover {
+    background-color: #BBDEFB;
 }
 
+
 main {
-  background-color: #263238; /* Um azul-cinzento escuro para o fundo do conteúdo principal */
-  color: #e3f2fd; /* Um azul bem claro para o texto */
-  padding: 20px 0; /* Adiciona padding para a seção principal */
-  display: flex; /* Garante que o main use flex para centralizar o conteúdo */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  min-height: 400px; /* Altura mínima para o main, ajuste se necessário */
+  background-color: #F0F8FF; /* Azul quase branco para o fundo do conteúdo principal */
+  color: #33495e; /* Um tom de azul escuro para o texto */
+  padding: 40px 0; /* Aumenta o padding para a seção principal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; /* Altura mínima maior para o main */
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.05); /* Sombra interna suave */
+}
+
+h1, h2 {
+  font-family: 'Amatic SC', cursive; /* Garante que a fonte Amatic SC seja usada */
+  font-weight: 700;
+  color: #2196F3; /* Um azul vibrante para os títulos */
 }
 
 /* REGRAS PARA ORGANIZAR A SEÇÃO PRINCIPAL (IMAGEM E TEXTO DO ARTISTA) */
 #principal {
-  display: flex; /* Ativa o flexbox para que figure e sec_ctd fiquem lado a lado */
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  gap: 40px; /* Espaço entre a imagem e o texto */
-  max-width: 960px; /* Largura máxima para a seção principal */
-  margin: 0 auto; /* Centraliza a seção principal na página */
-  padding: 20px; /* Padding interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Mais espaço entre a imagem e o texto */
+  max-width: 1100px; /* Aumenta a largura máxima para a seção principal */
+  margin: 0 auto;
+  padding: 30px; /* Padding interno */
+  background-color: #FFFFFF; /* Fundo branco para o bloco principal */
+  border-radius: 12px; /* Bordas mais arredondadas */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra mais pronunciada */
 }
 
 #principal figure {
-    flex-shrink: 0; /* Impede que a imagem encolha se não houver espaço */
-    margin: 0; /* Remove margem padrão da figure */
+    flex-shrink: 0;
+    margin: 0;
 }
 
 #principal img {
-  max-width: 300px; /* Tamanho máximo para a imagem do artista */
-  height: auto; /* Mantém a proporção */
-  border-radius: 8px; /* Adiciona um leve arredondamento nas bordas da imagem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a imagem */
+  max-width: 350px; /* Aumenta o tamanho máximo para a imagem do artista */
+  height: auto;
+  border-radius: 10px; /* Mais arredondamento nas bordas da imagem */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra para destacar a imagem */
 }
 
 #sec_ctd {
-  max-width: 600px; /* Largura máxima para o bloco de texto */
-  text-align: justify; /* Justifica o texto */
+  flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+  max-width: 700px; /* Aumenta a largura máxima para o bloco de texto */
+  text-align: justify;
 }
 
 #sec_ctd h1 {
-  font-size: 3em; /* Tamanho do título "O Artista" */
-  text-align: left; /* Alinha o título à esquerda */
-  margin-bottom: 10px; /* Espaço abaixo do título */
-  color: #a7d9e8; /* Cor para o título */
+  font-size: 3.5em; /* Título maior */
+  text-align: left;
+  margin-bottom: 15px;
+  color: #1976D2; /* Azul mais escuro para o título principal */
 }
 
 #sec_ctd p {
-  line-height: 1.6; /* Espaçamento entre as linhas do parágrafo */
+  line-height: 1.7; /* Mais espaçamento entre as linhas */
+  font-size: 1.05em; /* Levemente maior para facilitar a leitura */
 }
 
 
 /* REGRAS PARA ORGANIZAR A SEÇÃO SECUNDÁRIA (IMAGENS DOS CARTAZES/CAPAS) */
 #second {
-    display: flex; /* Ativa o flexbox para que os 'a.cartaz' fiquem lado a lado */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaço entre as imagens */
-    padding: 40px 0; /* Padding superior e inferior */
-    background-color: #1c262b; /* Fundo para a seção secundária */
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Mais espaço entre as imagens secundárias */
+    padding: 50px 0; /* Padding superior e inferior maior */
+    background-color: #E1F5FE; /* Azul claro para o fundo da seção secundária */
+    flex-wrap: wrap;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.05); /* Sombra interna suave */
 }
 
 #second a.cartaz {
-    display: block; /* Garante que a âncora se comporte como bloco */
+    display: block;
     text-align: center;
     text-decoration: none;
-    color: #e3f2fd;
+    color: #444; /* Cor mais escura para o texto nos links das capas */
 }
 
 #second .capa {
-    width: 250px; /* Largura fixa para as capas */
-    height: 350px; /* Altura fixa para as capas */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-    border-radius: 8px; /* Arredonda as bordas das capas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para as capas */
-    transition: transform 0.3s ease; /* Transição suave para o hover */
+    width: 280px; /* Largura um pouco maior para as capas */
+    height: 400px; /* Altura um pouco maior para as capas */
+    object-fit: cover;
+    border-radius: 10px; /* Mais arredondamento nas bordas das capas */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para as capas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #second .capa:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.03); /* Efeito de zoom mais sutil ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra um pouco maior no hover */
+}
+
+/* Ajustes para as páginas Filme, Livro, Música */
+/* O #principal nessas páginas tem uma estrutura diferente, com iframe ou listas */
+/* Por isso, vamos dar flex-direction: column ou ajustar o flex individualmente */
+
+/* Ajustes gerais para #principal nas páginas de conteúdo (Filme, Livro, Música) */
+/* Quando o main tem classes .f, .l, .m, o #principal dentro dele pode ter um layout diferente */
+main.f #principal,
+main.l #principal,
+main.m #principal {
+    flex-direction: column; /* Faz com que os itens se empilhem verticalmente */
+    gap: 30px; /* Espaço entre os itens empilhados */
+    max-width: 800px; /* Largura máxima ajustada para conteúdo centralizado */
+    padding: 40px;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    text-align: left;
+}
+
+main.f #principal #capa,
+main.l #principal #capa,
+main.m #principal #capa {
+    max-width: 400px; /* Ajusta o tamanho da imagem da capa nessas páginas */
+    height: auto;
+    width: 100%; /* Garante que a imagem se ajuste ao contêiner flex */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+main.f #principal #sec_ctd,
+main.l #principal #sec_ctd,
+main.m #principal #sec_ctd {
+    max-width: 100%; /* Ocupa a largura total disponível */
+    text-align: justify;
+}
+
+/* Ajustes específicos para a página Filme (iframe) */
+main.f #second {
+    flex-direction: column; /* Empilha os elementos na seção second do filme */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 30px;
+    padding: 40px;
+}
+
+main.f #second #descricao iframe {
+    max-width: 100%; /* Garante que o iframe não exceda a largura do contêiner */
+    height: 320px; /* Altura padrão para o iframe */
+    width: 600px; /* Largura padrão para o iframe */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Ajustes para a seção 'acesso' (Netflix, Amazon, etc. e Preço, Compre Agora!) */
+#acesso {
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#acesso.f { /* Cores mais claras para a seção de acesso do filme */
+    background-color: #B2EBF2;
+    color: #00796B;
+}
+
+#acesso.l { /* Cores mais claras para a seção de acesso do livro */
+    background-color: #C5CAE9;
+    color: #3F51B5;
+}
+
+#acesso.m { /* Cores mais claras para a seção de acesso da música */
+    background-color: #E0F7FA;
+    color: #00BCD4;
+    display: flex; /* Para os ícones sociais lado a lado */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#acesso a {
+    color: #1976D2; /* Cor azul para os links de acesso */
+    text-decoration: none;
+    font-weight: bold;
+    display: block; /* Para que cada link ocupe sua própria linha */
+    margin-bottom: 10px;
+}
+#acesso a:last-child {
+    margin-bottom: 0;
+}
+
+#acesso.m img {
+    height: 50px; /* Tamanho dos ícones de stream */
 }
 
 
 footer {
-  background-color: #263238; /* Dark grey-blue for the footer background, matching main */
-  color: #e3f2fd; /* Light blue for footer text, matching main */
+  background-color: #ADD8E6; /* Azul claro para o rodapé */
+  color: #2c3e50; /* Cor escura para o texto no rodapé */
   padding: 20px 0;
   text-align: center;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Sombra suave para o rodapé */
 }
 
 #contato {
     display: flex;
-    justify-content: space-around; /* Espaça email e social */
+    justify-content: space-around;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os blocos de contato */
 }
 
 #email a {
-    color: #e3f2fd;
+    color: #2c3e50; /* Azul escuro para o email no rodapé */
     text-decoration: none;
     font-size: 1.1em;
 }
 
 #social img {
-    height: 30px; /* Tamanho dos ícones sociais */
-    margin: 0 10px; /* Espaçamento entre os ícones */
+    height: 35px; /* Tamanho dos ícones sociais */
+    margin: 0 8px; /* Espaçamento entre os ícones */
+    filter: invert(20%) sepia(80%) saturate(200%) hue-rotate(180deg) brightness(80%) contrast(90%); /* Efeito para deixar os ícones azuis */
+}
+
+/* Regras para o sumário/faixas */
+#descricao {
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    flex-grow: 1; /* Permite que ocupe o espaço disponível */
+    margin: 0 auto; /* Centraliza */
+}
+
+#descricao h3 {
+    color: #1976D2;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#descricao ol, #descricao ul {
+    margin-left: 20px;
+    color: #444;
+}
+
+#descricao li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Ajuste para o .link-menu.l (cor do texto para o botão mais claro) */
+.link-menu.l {
+    color: #333; /* Texto mais escuro para o botão claro do livro */
 }
