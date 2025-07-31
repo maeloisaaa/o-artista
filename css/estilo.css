@@ -5,29 +5,29 @@ body {
 }
 
 header, #principal, #second, #contato, #stream {
-	
+
 }
 
 .link-menu {
   color: #fff;
-  background-color: #006492;
+  background-color: #3f51b5; /* Um azul médio para os links gerais do menu */
 }
 
 .f {
-  background-color: #145c44;
+  background-color: #1a237e; /* Um azul escuro, substituindo o #5b305a (roxo) */
 }
 
 .l {
-  background-color: #ff8800;
+  background-color: #2196f3; /* Um azul brilhante, substituindo o #e49756 (laranja) */
 }
 
 .m {
-  background-color: #b62c71;
+  background-color: #0d47a1; /* Um azul forte, substituindo o #e04b5a (vermelho) */
 }
 
 main {
-  background-color: #050505;
-  color: #f5f5f5;
+  background-color: #263238; /* Um azul-cinzento escuro para o fundo do conteúdo principal */
+  color: #e3f2fd; /* Um azul bem claro para o texto */
 }
 
 h1, h2 {
@@ -35,10 +35,10 @@ h1, h2 {
 }
 
 #second a{
-  color: #fff;
+  color: #e3f2fd; /* Azul claro para os links na seção #second */
 }
 
 footer {
-  background-color: #333;
-  color: #ddd;
+  background-color: #263238; /* Azul-cinzento escuro para o fundo do rodapé, combinando com o 'main' */
+  color: #e3f2fd; /* Azul claro para o texto do rodapé, combinando com o 'main' */
 }
