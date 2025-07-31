@@ -10,23 +10,23 @@ header, #principal, #second, #contato, #stream {
 
 .link-menu {
   color: #fff;
-  background-color: #555;
+  background-color: #f7d8ec;
 }
 
 .f {
-  background-color: #5b305a;
+  background-color: #bee5f7;
 }
 
 .l {
-  background-color: #e49756;
+  background-color: hsl(180, 100%, 93%), 100%, 93%);
 }
 
 .m {
-  background-color: #e04b5a;
+  background-color: #fddee8;
 }
 
 main {
-  background-color: #333;
+  background-color: #161616;
   color: #ddd;
 }
 
@@ -39,7 +39,7 @@ h1, h2 {
 }
 
 footer {
-  background-color: #333;
+  background-color: #161515515;
   color: #ddd;
 }
 
