@@ -6,9 +6,10 @@ body {
   padding: 0;
   background-color: #EBF7FF; /* Azul muito claro para o fundo geral */
   color: #33495e; /* Cor padrão para o texto */
+  line-height: 1.6; /* Espaçamento de linha geral */
 }
 
-/* Estilos para o cabeçalho (topo da página) */
+/* Estilos para o cabeçalho (topo da página) - Layout da Capturar.PNG */
 header {
   display: flex; /* Para logo e menu ficarem lado a lado */
   justify-content: space-between; /* Espaça logo e menu nas pontas */
@@ -18,6 +19,8 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra suave */
   width: 100%; /* Ocupa toda a largura */
   box-sizing: border-box; /* Inclui padding e borda na largura total */
+  position: relative; /* Para posicionar elementos filhos se necessário */
+  z-index: 10; /* Garante que fique acima de outros elementos */
 }
 
 #logo img {
@@ -25,7 +28,7 @@ header {
   display: block; /* Remove espaço extra abaixo da imagem */
 }
 
-/* Estilos para o menu de navegação */
+/* Estilos para o menu de navegação - Layout da Capturar.PNG */
 #menu {
   list-style: none; /* Remove marcadores de lista */
   margin: 0;
@@ -52,7 +55,7 @@ header {
   background-color: #4B90E3; /* Azul um pouco mais escuro no hover */
 }
 
-/* Cores específicas para os botões do menu Filme, Livro, Música */
+/* Cores específicas para os botões do menu Filme, Livro, Música - Mais claras */
 .f {
   background-color: #8FD0FF; /* Azul claro para Filme */
 }
@@ -76,14 +79,14 @@ header {
   background-color: #B5E6FF;
 }
 
-/* Estilos para o conteúdo principal */
+/* Estilos para o conteúdo principal - Layout da Capturar.PNG */
 main {
   background-color: #F8FCFF; /* Fundo muito claro para o conteúdo principal */
-  padding: 40px 0; /* Espaçamento superior e inferior */
+  padding: 50px 0; /* Espaçamento superior e inferior */
   display: flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Alinha o conteúdo verticalmente */
-  min-height: 550px; /* Altura mínima para o main */
+  min-height: 600px; /* Altura mínima para o main para garantir espaço */
 }
 
 h1, h2 {
@@ -91,9 +94,10 @@ h1, h2 {
   font-weight: 700;
   color: #007bff; /* Azul vibrante para títulos */
   text-transform: uppercase; /* Deixa os títulos em maiúsculas */
+  letter-spacing: 2px; /* Espaçamento entre letras para títulos */
 }
 
-/* SEÇÃO PRINCIPAL (IMAGEM DO ARTISTA E TEXTO) - index.html */
+/* SEÇÃO PRINCIPAL (IMAGEM DO ARTISTA E TEXTO) - index.html - Layout da Capturar.PNG */
 #principal {
   display: flex; /* Para imagem e texto ficarem lado a lado */
   align-items: center; /* Alinha verticalmente ao centro */
@@ -101,11 +105,11 @@ h1, h2 {
   gap: 60px; /* Espaço entre a imagem e o texto */
   max-width: 1200px; /* Largura máxima para a seção */
   margin: 0 auto; /* Centraliza a seção na página */
-  padding: 30px; /* Espaçamento interno */
+  padding: 40px; /* Espaçamento interno */
   background-color: #FFFFFF; /* Fundo branco para o bloco principal */
   border-radius: 15px; /* Bordas arredondadas */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave e perceptível */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
 }
 
 #principal figure {
@@ -114,7 +118,7 @@ h1, h2 {
 }
 
 #principal img {
-  max-width: 400px; /* Tamanho da imagem do artista */
+  width: 450px; /* Largura da imagem do artista - Ajuste para bater com Capturar.PNG */
   height: auto;
   border-radius: 10px; /* Arredondamento da imagem */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para a imagem */
@@ -122,12 +126,13 @@ h1, h2 {
 
 #sec_ctd {
   flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
-  max-width: 700px; /* Largura máxima para o bloco de texto */
+  max-width: 600px; /* Largura máxima para o bloco de texto */
   text-align: justify; /* Justifica o texto */
+  padding-right: 20px; /* Pequeno ajuste de padding para o texto */
 }
 
 #sec_ctd h1 {
-  font-size: 4.5em; /* Tamanho maior para o título "O Artista" */
+  font-size: 4.8em; /* Tamanho maior para o título "O Artista" */
   margin-bottom: 20px; /* Espaçamento abaixo do título */
   text-align: left; /* Alinhamento à esquerda */
   color: #1a75ff; /* Azul para o título principal */
@@ -139,7 +144,7 @@ h1, h2 {
   color: #444; /* Cor mais escura para o texto do parágrafo */
 }
 
-/* SEÇÃO SECUNDÁRIA (IMAGENS DOS CARTAZES/CAPAS) - index.html */
+/* SEÇÃO SECUNDÁRIA (IMAGENS DOS CARTAZES/CAPAS) - index.html - Layout da Capturar.PNG */
 #second {
   display: flex; /* Para as imagens ficarem lado a lado */
   justify-content: center; /* Centraliza as imagens */
@@ -147,6 +152,7 @@ h1, h2 {
   padding: 60px 0; /* Espaçamento superior e inferior */
   background-color: #EDF9FF; /* Fundo azul muito claro para a seção secundária */
   flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  box-sizing: border-box;
 }
 
 #second a.cartaz {
@@ -157,8 +163,8 @@ h1, h2 {
 }
 
 #second .capa {
-  width: 300px; /* Largura das capas */
-  height: 420px; /* Altura das capas */
+  width: 320px; /* Largura das capas - Ajuste para bater com Capturar.PNG */
+  height: 450px; /* Altura das capas - Ajuste para bater com Capturar.PNG */
   object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
   border-radius: 12px; /* Bordas arredondadas */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para as capas */
@@ -171,6 +177,7 @@ h1, h2 {
 }
 
 /* ESTILOS ESPECÍFICOS PARA AS PÁGINAS "FILME", "LIVRO", "MÚSICA" */
+/* Mantendo o layout da 983.PNG (Filme/Livro) e 123.PNG (Música) */
 
 /* Ajustes para o #principal quando ele está em uma página de conteúdo (main.f, main.l, main.m) */
 main.f #principal,
@@ -178,7 +185,7 @@ main.l #principal,
 main.m #principal {
     flex-direction: row; /* Mantém a imagem e o texto LADO A LADO */
     align-items: flex-start; /* Alinha os itens ao topo */
-    justify-content: flex-start; /* Alinha ao início */
+    justify-content: center; /* Centraliza o conteúdo */
     gap: 40px; /* Espaço entre imagem/iframe e texto */
     max-width: 1000px; /* Ajusta a largura máxima */
     padding: 40px;
@@ -200,7 +207,7 @@ main.m #principal #capa {
     border-radius: 10px;
 }
 
-/* Estilo para o iframe na página de filme */
+/* Estilo para o iframe na página de filme - Layout da 983.PNG */
 main.f #second {
     display: flex;
     flex-direction: row; /* Ítems lado a lado no "second" da página filme */
@@ -214,13 +221,35 @@ main.f #second {
     box-shadow: none; /* Sem sombra */
 }
 
+main.f #second #descricao { /* Ajuste para o iframe */
+    max-width: 600px; /* Largura máxima para o iframe */
+    height: 320px; /* Altura do iframe */
+    box-sizing: border-box;
+    display: flex; /* Para centralizar o iframe dentro de #descricao se necessário */
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding extra que pode quebrar o iframe */
+    background-color: transparent; /* Remove fundo branco se o iframe já tem seu próprio fundo */
+    box-shadow: none; /* Remove sombra extra */
+}
+
+main.f #second #descricao iframe {
+    width: 100%; /* Iframe ocupa toda a largura do seu contêiner */
+    height: 100%; /* Iframe ocupa toda a altura do seu contêiner */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* Estilos para o sumário/faixas na página de Livro/Música - Layout da 983.PNG e 123.PNG */
 #descricao {
-    flex-grow: 1; /* Permite que ocupe o espaço */
-    max-width: 600px; /* Largura máxima para o sumário/faixas */
-    background-color: #FFFFFF; /* Fundo branco para o bloco */
     padding: 25px;
+    background-color: #FFFFFF; /* Fundo branco para o bloco */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Largura máxima para o sumário/faixas */
+    flex-grow: 1; /* Permite que ocupe o espaço disponível */
+    margin: 0 auto; /* Centraliza */
     box-sizing: border-box;
 }
 
@@ -243,7 +272,7 @@ main.f #second {
 }
 
 
-/* Estilos para a seção de acesso (botões/preço) */
+/* Estilos para a seção de acesso (botões/preço) - Layout da 983.PNG e 123.PNG */
 #acesso {
   padding: 30px;
   border-radius: 10px;
@@ -252,10 +281,11 @@ main.f #second {
   font-size: 1.2em;
   font-weight: bold;
   display: flex; /* Para ícones ou links em linha */
-  flex-direction: column; /* Padrão vertical, ajuste para horizontal abaixo se precisar */
+  flex-direction: column; /* Padrão vertical para links */
   justify-content: center;
   align-items: center;
   gap: 15px; /* Espaço entre os itens internos */
+  box-sizing: border-box;
 }
 
 #acesso.f {
@@ -274,6 +304,9 @@ main.f #second {
   flex-direction: row; /* Ícones sociais lado a lado na seção de música */
   flex-wrap: wrap; /* Permite quebra de linha para ícones */
   gap: 25px; /* Mais espaço entre os ícones */
+  /* Altura e largura para o container dos ícones, se necessário ajustar visualmente */
+  width: 250px; /* Exemplo: Ajuste a largura do bloco dos ícones */
+  height: 100px; /* Exemplo: Ajuste a altura do bloco dos ícones */
 }
 
 #acesso a {
@@ -297,25 +330,27 @@ main.f #second {
   transform: scale(1.1); /* Efeito de zoom nos ícones */
 }
 
-/* Estilos para o rodapé */
+/* Estilos para o rodapé - Layout da Capturar.PNG */
 footer {
   background-color: #A0D8F0; /* Azul claro para o rodapé */
   color: #33495e; /* Cor do texto do rodapé */
-  padding: 25px 0; /* Espaçamento interno */
+  padding: 25px 5%; /* Espaçamento interno */
   text-align: center;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15); /* Sombra suave */
   width: 100%;
   box-sizing: border-box;
+  display: flex; /* Para email e social lado a lado */
+  justify-content: space-between; /* Espaça email e social */
+  align-items: center;
 }
 
 #contato {
-  display: flex; /* Para email e social ficarem lado a lado */
-  justify-content: space-around; /* Espaça os elementos */
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-  gap: 20px; /* Espaço entre os blocos de contato */
+    display: flex; /* Para email e social ficarem lado a lado, dentro do footer */
+    justify-content: space-between; /* Espaça os elementos */
+    align-items: center;
+    max-width: 960px; /* Largura máxima para o conteúdo do rodapé */
+    margin: 0 auto; /* Centraliza o conteúdo do rodapé */
+    width: 100%; /* Ocupa a largura total do max-width */
 }
 
 #email a {
@@ -329,14 +364,113 @@ footer {
   color: #007bff;
 }
 
+#social {
+    display: flex; /* Para os ícones ficarem lado a lado */
+    gap: 15px; /* Espaço entre os ícones */
+    align-items: center;
+}
+
 #social img {
   height: 38px; /* Tamanho dos ícones sociais */
-  margin: 0 10px; /* Espaço entre os ícones */
-  /* Filtro para converter os ícones para tons de azul, se eles forem originalmente preto/branco */
+  /* Filtro para converter os ícones para tons de azul */
   filter: brightness(0) saturate(100%) invert(35%) sepia(90%) saturate(1000%) hue-rotate(190deg) brightness(95%) contrast(100%);
   transition: transform 0.2s ease;
 }
 
 #social img:hover {
   transform: scale(1.1); /* Efeito de zoom nos ícones sociais */
+}
+
+
+/* Media Queries para Responsividade (ajuste se necessário para telas menores) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Empilha logo e menu em telas menores */
+    padding: 15px 3%;
+  }
+
+  #menu {
+    flex-direction: column; /* Empilha itens do menu */
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .link-menu {
+    width: 80%; /* Botões do menu ocupam mais largura */
+    text-align: center;
+  }
+
+  #principal {
+    flex-direction: column; /* Empilha imagem e texto na seção principal */
+    gap: 30px;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  #sec_ctd {
+    max-width: 100%; /* Ocupa largura total */
+    padding-right: 0;
+  }
+  #sec_ctd h1 {
+      font-size: 3.5em; /* Reduz tamanho do título */
+      text-align: center;
+  }
+
+  #second {
+    flex-direction: column; /* Empilha imagens secundárias */
+    gap: 30px;
+    padding: 40px 15px;
+  }
+
+  #second .capa {
+      width: 80%; /* Ajusta largura da capa em telas menores */
+      height: auto; /* Altura automática para manter proporção */
+      max-width: 300px;
+  }
+
+  main.f #principal,
+  main.l #principal,
+  main.m #principal {
+      flex-direction: column; /* Empilha imagem/iframe e texto */
+      align-items: center;
+      text-align: center;
+      padding: 30px 15px;
+  }
+
+  main.f #second {
+      flex-direction: column; /* Empilha iframe e acesso */
+      align-items: center;
+  }
+
+  main.f #second #descricao iframe {
+      width: 100%; /* Iframe 100% da largura do contêiner */
+      height: 250px; /* Altura ajustada */
+  }
+
+  #descricao, #acesso {
+      max-width: 90%; /* Ajusta largura dos blocos de sumário/acesso */
+      margin: 0 auto;
+      padding: 20px;
+  }
+
+  #acesso.m {
+      flex-direction: row; /* Mantém ícones lado a lado */
+      gap: 15px;
+  }
+
+  footer {
+    flex-direction: column; /* Empilha contato no rodapé */
+    padding: 20px 3%;
+  }
+
+  #contato {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #social {
+    justify-content: center; /* Centraliza ícones sociais */
+  }
 }
